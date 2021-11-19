@@ -1,8 +1,14 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:vannamei/DaftarPenyakit/virus2.dart';
+import 'package:vannamei/DaftarPenyakit/virus3.dart';
+import 'package:vannamei/DaftarPenyakit/virus4.dart';
+import 'package:vannamei/DaftarPenyakit/virus5.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:vannamei/constants.dart';
-import 'package:vannamei/homepage.dart';
+import 'DaftarPenyakit/virus1.dart';
 
 class Virus extends StatefulWidget {
   const Virus({Key key}) : super(key: key);
@@ -40,11 +46,11 @@ class _VirusState extends State<Virus> {
                       height: size.height * 0.02,
                     ),
                     Text(
-                      "by Virus",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline4
-                          .copyWith(fontWeight: FontWeight.w900),
+                      "Virus",
+                      style: GoogleFonts.fjallaOne(
+                          fontWeight: FontWeight.w900,
+                          color: kTextColor,
+                          fontSize: 30),
                     ),
                     SizedBox(height: 10),
                     Text(
@@ -55,51 +61,87 @@ class _VirusState extends State<Virus> {
                     SizedBox(
                       width: size.width * .6, // it just take 60% of total width
                       child: Text(
-                        "Live happier and healthier by learning the fundamentals of meditation and mindfulness",
+                        "Beberapa penyakit yang dapat menjangkit udang Vannamei disebabkan oleh serangan virus",
                       ),
                     ),
                     SizedBox(
-                      width: size.width * .5, // it just take the 50% width
-                      child: SearchBar(),
+                      height: 20, // it just take the 50% width
+                      // child: SearchBar(),
                     ),
                     Wrap(
                       spacing: 20,
                       runSpacing: 20,
                       children: <Widget>[
                         SeassionCard(
-                          seassionNum: 1,
-                          isDone: true,
-                          press: () {},
+                          virusName: "WSSV",
+                          // isDone: true,
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Virus1();
+                              }),
+                            );
+                          },
                         ),
                         SeassionCard(
-                          seassionNum: 2,
-                          press: () {},
+                          virusName: "TSV",
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Virus2();
+                              }),
+                            );
+                          },
                         ),
                         SeassionCard(
-                          seassionNum: 3,
-                          press: () {},
+                          virusName: "IMNV",
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Virus3();
+                              }),
+                            );
+                          },
                         ),
                         SeassionCard(
-                          seassionNum: 4,
-                          press: () {},
+                          virusName: "IHHNV",
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Virus4();
+                              }),
+                            );
+                          },
                         ),
                         SeassionCard(
-                          seassionNum: 5,
-                          press: () {},
+                          virusName: "YHD",
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Virus5();
+                              }),
+                            );
+                          },
                         ),
-                        SeassionCard(
-                          seassionNum: 6,
-                          press: () {},
-                        ),
+                        // SeassionCard(
+                        //   virusName: "",
+                        //   press: () {},
+                        // ),
                       ],
                     ),
                     SizedBox(height: 20),
                     Text(
-                      "Meditation",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline6
-                          .copyWith(fontWeight: FontWeight.bold),
+                      "Informasi",
+                      style: GoogleFonts.fjallaOne(
+                          fontWeight: FontWeight.w900,
+                          color: kMainColor,
+                          fontSize: 18,
+                          height: 2),
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 20),
@@ -108,14 +150,14 @@ class _VirusState extends State<Virus> {
                       decoration: BoxDecoration(
                         color: kBlueLightColor,
                         borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 23,
-                            spreadRadius: -13,
-                            color: kShadowColor,
-                          ),
-                        ],
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //     offset: Offset(0, 17),
+                        //     blurRadius: 23,
+                        //     spreadRadius: -13,
+                        //     color: kShadowColor,
+                        //   ),
+                        // ],
                       ),
                       child: Row(
                         children: <Widget>[
@@ -123,19 +165,19 @@ class _VirusState extends State<Virus> {
                           //   "assets/icons/Meditation_women_small.svg",
                           // ),
                           SizedBox(width: 20),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  "Basic 2",
-                                  style: Theme.of(context).textTheme.subtitle2,
-                                ),
-                                Text("Start your deepen you practice")
-                              ],
-                            ),
-                          ),
+                          // Expanded(
+                          //   child: Column(
+                          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          //     crossAxisAlignment: CrossAxisAlignment.start,
+                          //     children: <Widget>[
+                          //       Text(
+                          //         "Basic 2",
+                          //         style: Theme.of(context).textTheme.subtitle2,
+                          //       ),
+                          //       Text("Start your deepen you practice")
+                          //     ],
+                          //   ),
+                          // ),
                           Padding(
                             padding: EdgeInsets.all(10),
                             // child: SvgPicture.asset("assets/icons/Lock.svg"),
@@ -155,12 +197,12 @@ class _VirusState extends State<Virus> {
 }
 
 class SeassionCard extends StatelessWidget {
-  final int seassionNum;
+  final String virusName;
   final bool isDone;
   final Function press;
   const SeassionCard({
     Key key,
-    this.seassionNum,
+    this.virusName,
     this.isDone = false,
     this.press,
   }) : super(key: key);
@@ -194,24 +236,17 @@ class SeassionCard extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
                   children: <Widget>[
-                    Container(
-                      height: 42,
-                      width: 43,
-                      decoration: BoxDecoration(
-                        color: isDone ? kBlueColor : Colors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(color: kBlueColor),
-                      ),
-                      child: Icon(
-                        Icons.play_arrow,
-                        color: isDone ? Colors.white : kBlueColor,
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        "$virusName",
+                        style: Theme.of(context).textTheme.subtitle2,
                       ),
                     ),
-                    SizedBox(width: 10),
-                    Text(
-                      "Virus $seassionNum",
-                      style: Theme.of(context).textTheme.subtitle2,
-                    )
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: isDone ? Colors.white : kBlueColor,
+                    ),
                   ],
                 ),
               ),

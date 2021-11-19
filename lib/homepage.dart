@@ -1,9 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/constants.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/screen2.dart';
+import 'package:vannamei/screen3.dart';
 import 'package:vannamei/screen4.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,13 +27,14 @@ class HomeScreen extends StatelessWidget {
                     bottomRight: Radius.circular(30)),
                 color: kBackgroundColor,
                 // image: DecorationImage(
-                //   alignment: Alignment.centerLeft,
-                //   image: Image.asset(Icons.ac_unit)),
+                //     alignment: Alignment.centerLeft,
+                //     fit: BoxFit.,
+                //     image: AssetImage("assets/images/shrimp_logo1.png")),
               ),
             ),
             SafeArea(
                 child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50),
+              padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -45,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                         color: kBlueColor,
                         shape: BoxShape.circle,
                       ),
-                      // child: SvgPicture.asset(),
+                      // child: Image.asset("assets/images/shrimp_logo1.png"),
                     ),
                   ),
                   Text(
@@ -54,15 +58,15 @@ class HomeScreen extends StatelessWidget {
                     //   color: Colors.white,
                     //   fontWeight: FontWeight.w900,
                     // fontFamily: GoogleFonts()
-                    style: Theme.of(context).textTheme.headline4.copyWith(
+                    style: Theme.of(context).textTheme.headline5.copyWith(
                         fontWeight: FontWeight.w900, color: kBlueColor),
                   ),
-                  SearchBar(),
+                  TipBar(),
                   Expanded(
                       child: GridView.count(
                     crossAxisCount: 2,
-                    crossAxisSpacing: 40,
-                    mainAxisSpacing: 40,
+                    crossAxisSpacing: 30,
+                    mainAxisSpacing: 30,
                     childAspectRatio: .95,
                     children: <Widget>[
                       InkWell(
@@ -94,14 +98,14 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       InkWell(
-                        // onTap: () {
-                        //   Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(builder: (context) {
-                        //       return DetailsScreen();
-                        //     }),
-                        //   );
-                        // },
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              return ProfileScreen();
+                            }),
+                          );
+                        },
                         child: CategoryCard(
                           title: "Bantuan",
                           image: "assets/images/shrimp_logo3.png",
@@ -177,18 +181,18 @@ class CategoryCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 30),
+            SizedBox(height: 10),
             Image.asset(
               image,
-              height: 100,
+              height: 60,
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 10),
             Text(
               title,
               textAlign: TextAlign.center,
               style: GoogleFonts.josefinSans(
-                fontSize: 25,
-                fontWeight: FontWeight.w900,
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
                 color: kMainColor,
               ),
             )
@@ -222,6 +226,32 @@ class SearchBar extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class TipBar extends StatelessWidget {
+  const TipBar({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: EdgeInsets.symmetric(vertical: 30),
+        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 26),
+        decoration: BoxDecoration(
+          color: kMainColor,
+          borderRadius: BorderRadius.circular(18),
+        ),
+        child: Column(
+          children: <Widget>[
+            Text("Selamat Datang kepada pengguna di halaman Beranda",
+                style: GoogleFonts.raleway(
+                    fontSize: 13,
+                    color: kBlueColor,
+                    fontWeight: FontWeight.bold))
+          ],
+        ));
   }
 }
 

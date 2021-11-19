@@ -1,8 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:vannamei/DaftarPenyakit/parasit1.dart';
+// import 'package:vannamei/DaftarPenyakit/parasit2.dart';
+// import 'package:vannamei/DaftarPenyakit/parasit3.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:vannamei/constants.dart';
-import 'package:vannamei/homepage.dart';
 
 class Parasit extends StatefulWidget {
   const Parasit({Key key}) : super(key: key);
@@ -23,9 +27,10 @@ class _ParasitState extends State<Parasit> {
             decoration: BoxDecoration(
               color: kBlueLightColor,
               image: DecorationImage(
-                  image: AssetImage("assets/images/shrimp_logo1.png"),
-                  fit: BoxFit.fitHeight,
-                  alignment: Alignment.centerRight),
+                image: AssetImage("assets/images/shrimp_logo1.png"),
+                fit: BoxFit.fitHeight,
+                alignment: Alignment.centerRight,
+              ),
             ),
           ),
           SafeArea(
@@ -39,11 +44,11 @@ class _ParasitState extends State<Parasit> {
                       height: size.height * 0.02,
                     ),
                     Text(
-                      "by Parasit",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline4
-                          .copyWith(fontWeight: FontWeight.w900),
+                      "Parasit",
+                      style: GoogleFonts.fjallaOne(
+                          fontWeight: FontWeight.w900,
+                          color: kTextColor,
+                          fontSize: 30),
                     ),
                     SizedBox(height: 10),
                     Text(
@@ -54,51 +59,73 @@ class _ParasitState extends State<Parasit> {
                     SizedBox(
                       width: size.width * .6, // it just take 60% of total width
                       child: Text(
-                        "Live happier and healthier by learning the fundamentals of meditation and mindfulness",
+                        "Beberapa penyakit yang dapat menjangkit udang Vannamei disebabkan oleh infeksi parasit",
                       ),
                     ),
                     SizedBox(
-                      width: size.width * .5, // it just take the 50% width
-                      child: SearchBar(),
+                      height: 20, // it just take the 50% width
+                      // child: SearchBar(),
                     ),
                     Wrap(
                       spacing: 20,
                       runSpacing: 20,
                       children: <Widget>[
-                        SessCard(
-                          seassionNum: 1,
-                          isDone: true,
+                        SeassionCard(
+                          parasitName: "EHP",
+                          // isDone: true,
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) {
+                                return Parasit1();
+                              }),
+                            );
+                          },
+                        ),
+                        SeassionCard(
+                          parasitName: "2",
+                          press: () {
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(builder: (context) {
+                            //     return Parasit2();
+                            //   }),
+                            // );
+                          },
+                        ),
+                        SeassionCard(
+                          parasitName: "3",
+                          press: () {
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(builder: (context) {
+                            //     return Parasit3();
+                            //   }),
+                            // );
+                          },
+                        ),
+                        SeassionCard(
+                          parasitName: "4",
                           press: () {},
                         ),
-                        SessCard(
-                          seassionNum: 2,
-                          press: () {},
-                        ),
-                        SessCard(
-                          seassionNum: 3,
-                          press: () {},
-                        ),
-                        SessCard(
-                          seassionNum: 4,
-                          press: () {},
-                        ),
-                        SessCard(
-                          seassionNum: 5,
-                          press: () {},
-                        ),
-                        SessCard(
-                          seassionNum: 6,
-                          press: () {},
-                        ),
+                        // SeassionCard(
+                        //   parasitName: "",
+                        //   press: () {},
+                        // ),
+                        // SeassionCard(
+                        //   parasitName: "",
+                        //   press: () {},
+                        // ),
                       ],
                     ),
                     SizedBox(height: 20),
                     Text(
-                      "Meditation",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline6
-                          .copyWith(fontWeight: FontWeight.bold),
+                      "Informasi",
+                      style: GoogleFonts.fjallaOne(
+                          fontWeight: FontWeight.w900,
+                          color: kMainColor,
+                          fontSize: 18,
+                          height: 2),
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 20),
@@ -107,14 +134,14 @@ class _ParasitState extends State<Parasit> {
                       decoration: BoxDecoration(
                         color: kBlueLightColor,
                         borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 23,
-                            spreadRadius: -13,
-                            color: kShadowColor,
-                          ),
-                        ],
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //     offset: Offset(0, 17),
+                        //     blurRadius: 23,
+                        //     spreadRadius: -13,
+                        //     color: kShadowColor,
+                        //   ),
+                        // ],
                       ),
                       child: Row(
                         children: <Widget>[
@@ -122,19 +149,19 @@ class _ParasitState extends State<Parasit> {
                           //   "assets/icons/Meditation_women_small.svg",
                           // ),
                           SizedBox(width: 20),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  "Basic 2",
-                                  style: Theme.of(context).textTheme.subtitle2,
-                                ),
-                                Text("Start your deepen you practice")
-                              ],
-                            ),
-                          ),
+                          // Expanded(
+                          //   child: Column(
+                          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          //     crossAxisAlignment: CrossAxisAlignment.start,
+                          //     children: <Widget>[
+                          //       Text(
+                          //         "Basic 2",
+                          //         style: Theme.of(context).textTheme.subtitle2,
+                          //       ),
+                          //       Text("Start your deepen you practice")
+                          //     ],
+                          //   ),
+                          // ),
                           Padding(
                             padding: EdgeInsets.all(10),
                             // child: SvgPicture.asset("assets/icons/Lock.svg"),
@@ -153,13 +180,13 @@ class _ParasitState extends State<Parasit> {
   }
 }
 
-class SessCard extends StatelessWidget {
-  final int seassionNum;
+class SeassionCard extends StatelessWidget {
+  final String parasitName;
   final bool isDone;
   final Function press;
-  const SessCard({
+  const SeassionCard({
     Key key,
-    this.seassionNum,
+    this.parasitName,
     this.isDone = false,
     this.press,
   }) : super(key: key);
@@ -193,24 +220,17 @@ class SessCard extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
                   children: <Widget>[
-                    Container(
-                      height: 42,
-                      width: 43,
-                      decoration: BoxDecoration(
-                        color: isDone ? kBlueColor : Colors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(color: kBlueColor),
-                      ),
-                      child: Icon(
-                        Icons.play_arrow,
-                        color: isDone ? Colors.white : kBlueColor,
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        "$parasitName",
+                        style: Theme.of(context).textTheme.subtitle2,
                       ),
                     ),
-                    SizedBox(width: 10),
-                    Text(
-                      "Parasit $seassionNum",
-                      style: Theme.of(context).textTheme.subtitle2,
-                    )
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: isDone ? Colors.white : kBlueColor,
+                    ),
                   ],
                 ),
               ),

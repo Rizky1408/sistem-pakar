@@ -34,12 +34,13 @@ class _DetailsScreenState extends State<DetailsScreen> {
         title: Text(
           "Informasi Daftar Penyakit",
           style: GoogleFonts.josefinSans(
-              fontSize: 25, fontWeight: FontWeight.bold),
+              fontSize: 20, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
         ),
         centerTitle: true,
-        backgroundColor: kBackgroundColor,
+        backgroundColor: kBlueColor,
       ),
-      backgroundColor: Colors.teal[100],
+      backgroundColor: kBlueColor,
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

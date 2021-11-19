@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   google_fonts: ^2.1.0
   flutter_svg: ^0.19.0
+  cached_network_image: ^3.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -53,6 +54,7 @@ flutter:
     - assets/images/shrimp_logo.png
     - assets/images/shrimp_logo2.png
     - assets/images/shrimp_logo3.png
+    - assets/images/shrimp_logo4.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
