@@ -110,17 +110,17 @@ class Body extends StatelessWidget {
             ProfilePic(),
             SizedBox(height: 20),
             ProfileMenu(
-              text: "My Account",
+              text: "Cara menggunakan aplikasi",
               // icon: "",
               press: () => {},
             ),
             ProfileMenu(
-              text: "Notifications",
+              text: "Cara melakukan diagnosa penyakit Vannamei",
               // icon: "assets/icons/Bell.svg",
               press: () {},
             ),
             ProfileMenu(
-              text: "Settings",
+              text: "Mengenai informasi perawatan, penanganan, atau pencegahan",
               // icon: "assets/icons/Settings.svg",
               press: () {},
             ),
