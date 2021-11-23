@@ -6,21 +6,20 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/app_enum.dart';
 import 'package:vannamei/checkbox_widget.dart';
 import 'package:vannamei/constants.dart';
-import 'package:vannamei/question_widget2.dart';
 import 'package:vannamei/screen1.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class QuestionWidget extends StatefulWidget {
-  const QuestionWidget({Key key}) : super(key: key);
+class QuestionWidget2 extends StatefulWidget {
+  const QuestionWidget2({Key key}) : super(key: key);
 
   @override
-  _QuestionWidgetState createState() => _QuestionWidgetState();
+  _QuestionWidget2State createState() => _QuestionWidget2State();
 }
 
-class _QuestionWidgetState extends State<QuestionWidget> {
-  String groupValue;
-  String groupValue2;
-  String groupValue3;
+class _QuestionWidget2State extends State<QuestionWidget2> {
+  String groupValue7;
+  String groupValue8;
+  String groupValue9;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +53,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                           height: 20,
                         ),
                         Text(
-                          "Apakah nafsu makan udang menurun/udang tidak makan?",
+                          "Udang berenang ke permukaan atau ke tepi?",
                           style: GoogleFonts.josefinSans(
                               fontSize: 20, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center,
@@ -70,11 +69,11 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                                 children: <Widget>[
                                   Radio(
                                       value: "Yes",
-                                      groupValue: groupValue,
+                                      groupValue: groupValue7,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue = value;
+                                          this.groupValue7 = value;
                                         });
                                       }),
                                   Text(
@@ -92,11 +91,11 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                                 children: <Widget>[
                                   Radio(
                                       value: "No",
-                                      groupValue: groupValue,
+                                      groupValue: groupValue7,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue = value;
+                                          this.groupValue7 = value;
                                         });
                                       }),
                                   Text(
@@ -124,7 +123,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                           height: 20,
                         ),
                         Text(
-                          "Apakah pertumbuhan udang lambat?",
+                          "Aktivitas/gerak pada udang berkurang?",
                           style: GoogleFonts.josefinSans(
                               fontSize: 20, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center,
@@ -140,11 +139,11 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                                 children: <Widget>[
                                   Radio(
                                       value: "Yes",
-                                      groupValue: groupValue2,
+                                      groupValue: groupValue8,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue2 = value;
+                                          this.groupValue8 = value;
                                         });
                                       }),
                                   Text(
@@ -162,11 +161,11 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                                 children: <Widget>[
                                   Radio(
                                       value: "No",
-                                      groupValue: groupValue2,
+                                      groupValue: groupValue8,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue2 = value;
+                                          this.groupValue8 = value;
                                         });
                                       }),
                                   Text(
@@ -194,7 +193,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                           height: 20,
                         ),
                         Text(
-                          "Apakah tubuh udang berwarna kemerahan?",
+                          "Udang berenang secara tidak teratur?",
                           style: GoogleFonts.josefinSans(
                               fontSize: 20, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center,
@@ -210,11 +209,11 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                                 children: <Widget>[
                                   Radio(
                                       value: "Yes",
-                                      groupValue: groupValue3,
+                                      groupValue: groupValue9,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue3 = value;
+                                          this.groupValue9 = value;
                                         });
                                       }),
                                   Text(
@@ -232,11 +231,11 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                                 children: <Widget>[
                                   Radio(
                                       value: "No",
-                                      groupValue: groupValue3,
+                                      groupValue: groupValue9,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue3 = value;
+                                          this.groupValue9 = value;
                                         });
                                       }),
                                   Text(
@@ -272,7 +271,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                       ),
                       onPressed: () => Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Question2()),
+                        MaterialPageRoute(builder: (context) => Question3()),
                       ),
                     ),
                   )
@@ -284,15 +283,15 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   }
 }
 
-class Question2 extends StatefulWidget {
+class Question3 extends StatefulWidget {
   @override
-  _Question2State createState() => _Question2State();
+  _Question3State createState() => _Question3State();
 }
 
-class _Question2State extends State<Question2> {
-  String groupValue4;
-  String groupValue5;
-  String groupValue6;
+class _Question3State extends State<Question3> {
+  String groupValue10;
+  String groupValue11;
+  String groupValue12;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -325,7 +324,7 @@ class _Question2State extends State<Question2> {
                           height: 20,
                         ),
                         Text(
-                          "Apakah bagian ekor udang berwarna kemerahan?",
+                          "Mengalami kematian bertahap atau masal?",
                           style: GoogleFonts.josefinSans(
                               fontSize: 20, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center,
@@ -341,11 +340,11 @@ class _Question2State extends State<Question2> {
                                 children: <Widget>[
                                   Radio(
                                       value: "Yes",
-                                      groupValue: groupValue4,
+                                      groupValue: groupValue10,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue4 = value;
+                                          this.groupValue10 = value;
                                         });
                                       }),
                                   Text(
@@ -363,11 +362,11 @@ class _Question2State extends State<Question2> {
                                 children: <Widget>[
                                   Radio(
                                       value: "No",
-                                      groupValue: groupValue4,
+                                      groupValue: groupValue10,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue4 = value;
+                                          this.groupValue10 = value;
                                         });
                                       }),
                                   Text(
@@ -411,11 +410,11 @@ class _Question2State extends State<Question2> {
                                 children: <Widget>[
                                   Radio(
                                       value: "Yes",
-                                      groupValue: groupValue5,
+                                      groupValue: groupValue11,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue5 = value;
+                                          this.groupValue11 = value;
                                         });
                                       }),
                                   Text(
@@ -433,11 +432,11 @@ class _Question2State extends State<Question2> {
                                 children: <Widget>[
                                   Radio(
                                       value: "No",
-                                      groupValue: groupValue5,
+                                      groupValue: groupValue11,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue5 = value;
+                                          this.groupValue11 = value;
                                         });
                                       }),
                                   Text(
@@ -481,11 +480,11 @@ class _Question2State extends State<Question2> {
                                 children: <Widget>[
                                   Radio(
                                       value: "Yes",
-                                      groupValue: groupValue6,
+                                      groupValue: groupValue12,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue6 = value;
+                                          this.groupValue12 = value;
                                         });
                                       }),
                                   Text(
@@ -503,11 +502,11 @@ class _Question2State extends State<Question2> {
                                 children: <Widget>[
                                   Radio(
                                       value: "No",
-                                      groupValue: groupValue6,
+                                      groupValue: groupValue12,
                                       activeColor: kBlueColor,
                                       onChanged: (value) {
                                         setState(() {
-                                          this.groupValue6 = value;
+                                          this.groupValue12 = value;
                                         });
                                       }),
                                   Text(
@@ -537,15 +536,14 @@ class _Question2State extends State<Question2> {
                           textStyle: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold)),
                       child: Text(
-                        "Selanjutnya",
+                        "Hasil Diagnosa",
                         style: GoogleFonts.josefinSans(
                             color: Colors.white, fontWeight: FontWeight.w700),
                       ),
-                      onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => QuestionWidget2()),
-                      ),
+                      // onPressed: () => Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => Hasil()),
+                      // ),
                     ),
                   )
                 ],
@@ -555,281 +553,3 @@ class _Question2State extends State<Question2> {
         ));
   }
 }
-
-
-
-// final List<Question> questions = [
-//   Question("Apakah nafsu makan udang menurun/udang tidak makan?", "Iya",
-//       "Tidak", "Mungkin", 1),
-//   Question("'.MOV' extension refers usually to what kind of file?", "Iya",
-//       "Tidak", "Mungkin", 1),
-//   Question("Who developed Yahoo?", "Iya", "Tidak", "Mungkin", 1),
-//   Question("Who developed Yahoo?", "Iya", "Tidak", "Mungkin", 1),
-//   Question("Who developed Yahoo?", "Iya", "Tidak", "Mungkin", 1),
-// ];
-
-// class QuestionScreen1 extends StatefulWidget {
-//   QuestionScreen1({Key key, this.title}) : super(key: key);
-
-//   final String title;
-
-//   @override
-//   _QuestionScreen1State createState() => _QuestionScreen1State();
-// }
-
-// class _QuestionScreen1State extends State<QuestionScreen1> {
-//   CarouselController buttonCarouselController = CarouselController();
-
-//   @override
-//   Widget build(BuildContext context) {
-//     final double height = MediaQuery.of(context).size.height;
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor: kBlueColor,
-//         title: Text(
-//           "Cek Diagnosa",
-//           style: TextStyle(color: Colors.white),
-//         ),
-//       ),
-//       body: CarouselSlider(
-//         carouselController: buttonCarouselController,
-//         options: CarouselOptions(
-//             height: height - 100,
-//             viewportFraction: 1.0,
-//             enlargeCenterPage: false,
-//             reverse: false
-//             // autoPlay: false,
-//             ),
-//         items: questions
-//             .map((item) => Container(
-//                   child: Center(
-//                       child: QuestionWidget(item, buttonCarouselController)),
-//                 ))
-//             .toList(),
-//       ),
-//     );
-//   }
-// }
-
-// class Question {
-//   String question;
-//   String optionA;
-//   String optionB;
-//   String optionC;
-
-//   int type;
-
-//   String ans;
-
-//   Question(this.question, this.optionA, this.optionB, this.ans, this.type);
-// }
-
-// class QuestionWidget extends StatefulWidget {
-//   Question question;
-//   CarouselController buttonCarouselController;
-
-//   QuestionWidget(
-//     this.question,
-//     this.buttonCarouselController, {
-//     Key key,
-//   }) : super(key: key);
-
-//   @override
-//   _QuestionWidgetState createState() =>
-//       _QuestionWidgetState(question, buttonCarouselController);
-// }
-
-// class _QuestionWidgetState extends State<QuestionWidget> {
-//   _QuestionWidgetState(this.item, this.buttonCarouselController);
-
-//   CarouselController buttonCarouselController;
-
-//   Question item;
-
-//   AppEnum _character = AppEnum.NON;
-
-//   bool _isSelectedA = false;
-//   bool _isSelectedB = false;
-//   bool _isSelectedC = false;
-
-//   int radio = 1;
-//   int check = 2;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//         padding: const EdgeInsets.all(20.0),
-//         child: Column(children: <Widget>[
-//           item.type == check ? getCheckBoxWidget(item) : getRadioWidget(item),
-//           SizedBox(
-//             height: 30.0,
-//           ),
-//           actionButton(),
-//         ]));
-//   }
-
-//   onVerifyClick() {
-//     var msg = "";
-
-//     if (item.type == radio) {
-//       if (_character == AppEnum.optionA && item.optionA == item.ans ||
-//           _character == AppEnum.optionB && item.optionB == item.ans ||
-//           _character == AppEnum.optionC && item.optionC == item.ans) {
-//         msg = "Correct";
-//       } else {
-//         msg = "Incorrect";
-//       }
-//     } else {
-//       if (_isSelectedA && item.optionA == item.ans ||
-//           _isSelectedB && item.optionB == item.ans ||
-//           _isSelectedC && item.optionC == item.ans) {
-//         msg = "Correct";
-//       } else {
-//         msg = "Incorrect";
-//       }
-//     }
-
-//     Fluttertoast.showToast(
-//         msg: msg,
-//         toastLength: Toast.LENGTH_SHORT,
-//         gravity: ToastGravity.CENTER,
-//         timeInSecForIosWeb: 1,
-//         backgroundColor: Colors.grey,
-//         textColor: Colors.white,
-//         fontSize: 16.0);
-//   }
-
-//   Widget getCheckBoxWidget(Question item) {
-//     return Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: <Widget>[
-//           Align(
-//             alignment: Alignment.centerLeft,
-//             child: Text(
-//               item.question,
-//               textAlign: TextAlign.left,
-//               style: TextStyle(
-//                 fontWeight: FontWeight.bold,
-//                 fontSize: 18.0,
-//               ),
-//             ),
-//           ),
-//           CheckBoxWidget(
-//             label: item.optionA,
-//             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-//             value: _isSelectedA,
-//             onChanged: (bool newValue) {
-//               setState(() {
-//                 _isSelectedA = newValue;
-//               });
-//             },
-//           ),
-//           CheckBoxWidget(
-//             label: item.optionB,
-//             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-//             value: _isSelectedB,
-//             onChanged: (bool newValue) {
-//               setState(() {
-//                 _isSelectedB = newValue;
-//               });
-//             },
-//           ),
-//           CheckBoxWidget(
-//             label: item.optionC,
-//             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-//             value: _isSelectedC,
-//             onChanged: (bool newValue) {
-//               setState(() {
-//                 _isSelectedC = newValue;
-//               });
-//             },
-//           ),
-//         ]);
-//   }
-
-//   Widget getRadioWidget(Question item) {
-//     return Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: <Widget>[
-//           Align(
-//             alignment: Alignment.centerLeft,
-//             child: Text(
-//               item.question,
-//               textAlign: TextAlign.left,
-//               style: TextStyle(
-//                 fontWeight: FontWeight.bold,
-//                 fontSize: 18.0,
-//               ),
-//             ),
-//           ),
-//           RadioListTile<AppEnum>(
-//             title: Text(item.optionA),
-//             value: AppEnum.optionA,
-//             groupValue: _character,
-//             onChanged: (AppEnum value) {
-//               setState(() {
-//                 _character = value;
-//               });
-//             },
-//           ),
-//           RadioListTile<AppEnum>(
-//             title: Text(item.optionB),
-//             value: AppEnum.optionB,
-//             groupValue: _character,
-//             onChanged: (AppEnum value) {
-//               setState(() {
-//                 _character = value;
-//               });
-//             },
-//           ),
-//           RadioListTile<AppEnum>(
-//             title: Text(item.optionC),
-//             value: AppEnum.optionC,
-//             groupValue: _character,
-//             onChanged: (AppEnum value) {
-//               setState(() {
-//                 _character = value;
-//               });
-//             },
-//           ),
-//         ]);
-//   }
-
-//   Widget actionButton() {
-//     return Row(
-//       mainAxisAlignment: MainAxisAlignment.center,
-//       children: <Widget>[
-//         // ElevatedButton(
-//         //   style: ElevatedButton.styleFrom(
-//         //       primary: Color(0xFF167F67),
-//         //       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-//         //       textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-//         //   child: Text(
-//         //     "Verify",
-//         //     style: TextStyle(color: Colors.white),
-//         //   ),
-//         //   onPressed: () => onVerifyClick(),
-//         // ),
-//         SizedBox(
-//           width: 20.0,
-//         ),
-//         ElevatedButton(
-//           style: ElevatedButton.styleFrom(
-//               primary: Color(0xFF167F67),
-//               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-//               textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-//           child: Text(
-//             "Next",
-//             style: TextStyle(color: Colors.white),
-//           ),
-//           onPressed: () => onNextClick(),
-//         ),
-//       ],
-//     );
-//   }
-
-//   onNextClick() {
-//     buttonCarouselController.nextPage(
-//         duration: Duration(milliseconds: 300), curve: Curves.linear);
-//   }
-// }

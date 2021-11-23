@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/constants.dart';
-import 'package:vannamei/main.dart';
 import 'package:vannamei/screen1.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/screen2.dart';
