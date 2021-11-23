@@ -44,7 +44,7 @@ class _BakteriState extends State<Bakteri> {
                       height: size.height * 0.02,
                     ),
                     Text(
-                      "by Bakteri",
+                      "Bakteri",
                       style: GoogleFonts.fjallaOne(
                           fontWeight: FontWeight.w900,
                           color: kTextColor,

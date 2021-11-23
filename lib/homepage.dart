@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/constants.dart';
+import 'package:vannamei/main.dart';
+import 'package:vannamei/screen1.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/screen2.dart';
 import 'package:vannamei/screen3.dart';
@@ -14,7 +16,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: kMainColor,
+      backgroundColor: kBlueLightColor,
       body: Container(
         // margin: EdgeInsets.only(bottom: 30.0),
         child: Stack(
@@ -70,14 +72,14 @@ class HomeScreen extends StatelessWidget {
                     childAspectRatio: .95,
                     children: <Widget>[
                       InkWell(
-                        // onTap: () {
-                        //   Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(builder: (context) {
-                        //       return DetailsScreen();
-                        //     }),
-                        //   );
-                        // },
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              return QuestionScreen();
+                            }),
+                          );
+                        },
                         child: CategoryCard(
                           title: "Cek Diagnosa",
                           image: "assets/images/shrimp_logo.png",
