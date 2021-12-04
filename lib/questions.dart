@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/constants.dart';
+import 'package:vannamei/question_widget.dart';
 import 'package:vannamei/slider.dart';
 
 class Landing extends StatefulWidget {
@@ -16,15 +17,43 @@ class _LandingState extends State<Landing> {
     SliderPage(
       title: "Udang berenang ke permukaan atau ke tepi",
       description: "Udang berenang ke permukaan atau ke tepi",
+      value: "value",
     ),
     SliderPage(
       title: "Udang berenang ke permukaan atau ke tepi",
       description:
           "Buy Bitcoin and cryptocurrencies with VISA and MasterVard right in the App",
+      value: "value2",
     ),
     SliderPage(
-      description:
-          "Sell your Bitcoin cryptocurrencies or Change with orthres digital assets or flat money",
+      title: "Udang berenang ke permukaan atau ke tepi",
+      description: "Udang berenang ke permukaan atau ke tepi",
+      value: "value3",
+    ),
+    SliderPage(
+      title: "Udang berenang ke permukaan atau ke tepi",
+      description: "Udang berenang ke permukaan atau ke tepi",
+      value: "value4",
+    ),
+    SliderPage(
+      title: "Udang berenang ke permukaan atau ke tepi",
+      description: "Udang berenang ke permukaan atau ke tepi",
+      value: "value5",
+    ),
+    SliderPage(
+      title: "Udang berenang ke permukaan atau ke tepi",
+      description: "Udang berenang ke permukaan atau ke tepi",
+      value: "value6",
+    ),
+    SliderPage(
+      title: "Udang berenang ke permukaan atau ke tepi",
+      description: "Udang berenang ke permukaan atau ke tepi",
+      value: "value7",
+    ),
+    SliderPage(
+      title: "Udang berenang ke permukaan atau ke tepi",
+      description: "Udang berenang ke permukaan atau ke tepi",
+      value: "value8",
     ),
   ];
 
@@ -90,11 +119,23 @@ class _LandingState extends State<Landing> {
                       color: kBlueColor,
                       borderRadius: BorderRadius.circular(35)),
                   child: (_currentPage == (_pages.length - 1))
-                      ? Text(
-                          "Get Started",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
+                      ? ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              primary: kBlueColor,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 8),
+                              textStyle: TextStyle(
+                                  fontSize: 25, fontWeight: FontWeight.bold)),
+                          child: Text(
+                            "Cek Hasil",
+                            style: GoogleFonts.josefinSans(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => QuestionWidget()),
                           ),
                         )
                       : Icon(
