@@ -1,11 +1,11 @@
 import 'dart:core';
-
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/constants.dart';
 import 'package:vannamei/question_widget.dart';
+import 'package:vannamei/questions.dart';
 import 'package:vannamei/screen3.dart';
+import 'package:vannamei/slider.dart';
 
 // final List<Question> questions = [
 //   Question(
@@ -68,7 +68,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
           backgroundColor: kBlueColor,
           title: Text(
             "Cek Diagnosa",
-            style: TextStyle(color: Colors.white),
+            style: GoogleFonts.josefinSans(
+                fontSize: 20, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
           ),
         ),
         body: Container(
@@ -111,8 +113,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                       ),
                       onPressed: () => Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => QuestionWidget()),
+                        MaterialPageRoute(builder: (context) => Landing()),
                       ),
                     ),
                   )

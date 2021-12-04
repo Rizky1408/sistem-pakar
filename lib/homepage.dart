@@ -42,25 +42,28 @@ class HomeScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.topRight,
                     child: Container(
-                      margin: const EdgeInsets.only(top: 10.0),
-                      alignment: Alignment.center,
+                      margin: const EdgeInsets.only(top: 5.0),
+                      // alignment: Alignment.center,
                       height: 52,
                       width: 52,
-                      decoration: BoxDecoration(
-                        color: kBlueColor,
-                        shape: BoxShape.circle,
-                      ),
+                      // decoration: BoxDecoration(
+                      //   color: kBlueColor,
+                      //   shape: BoxShape.circle,
+                      // ),
                       // child: Image.asset("assets/images/shrimp_logo1.png"),
                     ),
                   ),
                   Text(
-                    "Selamat Datang",
+                    "SISTEM PAKAR PENYAKIT VANNAMEI",
                     // style: TextStyle(
                     //   color: Colors.white,
                     //   fontWeight: FontWeight.w900,
                     // fontFamily: GoogleFonts()
                     style: Theme.of(context).textTheme.headline5.copyWith(
-                        fontWeight: FontWeight.w900, color: kBlueColor),
+                          fontWeight: FontWeight.w900,
+                          color: kBlueColor,
+                        ),
+                    textAlign: TextAlign.center,
                   ),
                   TipBar(),
                   Expanded(
@@ -238,8 +241,8 @@ class TipBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.symmetric(vertical: 30),
-        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 26),
+        margin: EdgeInsets.only(bottom: 35, top: 20),
+        padding: EdgeInsets.symmetric(horizontal: 18, vertical: 20),
         decoration: BoxDecoration(
           color: kMainColor,
           borderRadius: BorderRadius.circular(18),
@@ -248,7 +251,7 @@ class TipBar extends StatelessWidget {
           children: <Widget>[
             Text("Selamat Datang kepada pengguna di halaman Beranda",
                 style: GoogleFonts.raleway(
-                    fontSize: 13,
+                    fontSize: 16,
                     color: kBlueColor,
                     fontWeight: FontWeight.bold))
           ],

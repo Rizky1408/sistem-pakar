@@ -22,27 +22,27 @@ class ProfileScreen extends StatelessWidget {
           // ProfilePic(),
           SizedBox(height: 20),
           ProfileMenu(
-            text: "My Account",
+            text: "Cara Menggunakan Aplikasi",
             // icon: "",
             press: () => {},
           ),
           ProfileMenu(
-            text: "Notifications",
+            text: "Cara Melakukan Diagnosa Penyakit Vannamei",
             // icon: "assets/icons/Bell.svg",
             press: () {},
           ),
           ProfileMenu(
-            text: "Settings",
+            text: "Mengenai Informasi Perawatan, Penanganan, atau Pencegahan",
             // icon: "assets/icons/Settings.svg",
             press: () {},
           ),
           ProfileMenu(
-            text: "Help Center",
+            text: "Pusat Bantuan",
             // icon: "assets/icons/Question mark.svg",
             press: () {},
           ),
           ProfileMenu(
-            text: "Log Out",
+            text: "Syarat dan Ketentuan Aplikasi",
             // icon: "assets/icons/Log out.svg",
             press: () {},
           ),
