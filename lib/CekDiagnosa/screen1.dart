@@ -2,55 +2,7 @@ import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/constants.dart';
-import 'package:vannamei/question_widget.dart';
-import 'package:vannamei/questions.dart';
-import 'package:vannamei/screen3.dart';
-import 'package:vannamei/slider.dart';
-
-// final List<Question> questions = [
-//   Question(
-//       "Pilih gejala di bawah ini untuk mulai mengidentifikasi penyakit pada udang anda",
-//       "Order of Significance",
-//       "Open Software",
-//       "Operating System",
-//       "Optical Sensor",
-//       "Operating System",
-//       1),
-//   Question(
-//       "'OS' computer abbreviation usually means ?",
-//       "Order of Significance",
-//       "Open Software",
-//       "Operating System",
-//       "Optical Sensor",
-//       "Operating System",
-//       1),
-//   Question(
-//       "'.MOV' extension refers usually to what kind of file?",
-//       "Image file",
-//       "Animation/movie file",
-//       "Audio file",
-//       "MS Office document",
-//       "Animation/movie file",
-//       2),
-//   Question(
-//       "Who developed Yahoo?",
-//       "Dennis Ritchie & Ken Thompson",
-//       "David Filo & Jerry Yang",
-//       "Vint Cerf & Robert Kahn",
-//       "Steve Case & Jeff Bezos",
-//       "Dennis Ritchie & Ken Thompson",
-//       2),
-//   Question("What does AM mean?", "Angelo marconi", "Anno median",
-//       "Amplitude modulation", "Amperes", "Amplitude modulation", 1),
-//   Question(
-//       "Where is the headquarters of Intel located?",
-//       "Redmond, Washington",
-//       "Tucson, Arizona",
-//       "Santa Clara, California",
-//       "Richmond, Virginia",
-//       "Santa Clara, California",
-//       1)
-// ];
+import 'package:vannamei/CekDiagnosa/question_widget.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({Key key}) : super(key: key);
@@ -62,10 +14,10 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: kBlueColor,
+          centerTitle: true,
           title: Text(
             "Cek Diagnosa",
             style: GoogleFonts.josefinSans(
@@ -113,7 +65,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                       ),
                       onPressed: () => Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Landing()),
+                        MaterialPageRoute(
+                            builder: (context) => QuestionWidget()),
                       ),
                     ),
                   )
@@ -124,6 +77,53 @@ class _QuestionScreenState extends State<QuestionScreen> {
         ));
   }
 }
+
+// final List<Question> questions = [
+//   Question(
+//       "Pilih gejala di bawah ini untuk mulai mengidentifikasi penyakit pada udang anda",
+//       "Order of Significance",
+//       "Open Software",
+//       "Operating System",
+//       "Optical Sensor",
+//       "Operating System",
+//       1),
+//   Question(
+//       "'OS' computer abbreviation usually means ?",
+//       "Order of Significance",
+//       "Open Software",
+//       "Operating System",
+//       "Optical Sensor",
+//       "Operating System",
+//       1),
+//   Question(
+//       "'.MOV' extension refers usually to what kind of file?",
+//       "Image file",
+//       "Animation/movie file",
+//       "Audio file",
+//       "MS Office document",
+//       "Animation/movie file",
+//       2),
+//   Question(
+//       "Who developed Yahoo?",
+//       "Dennis Ritchie & Ken Thompson",
+//       "David Filo & Jerry Yang",
+//       "Vint Cerf & Robert Kahn",
+//       "Steve Case & Jeff Bezos",
+//       "Dennis Ritchie & Ken Thompson",
+//       2),
+//   Question("What does AM mean?", "Angelo marconi", "Anno median",
+//       "Amplitude modulation", "Amperes", "Amplitude modulation", 1),
+//   Question(
+//       "Where is the headquarters of Intel located?",
+//       "Redmond, Washington",
+//       "Tucson, Arizona",
+//       "Santa Clara, California",
+//       "Richmond, Virginia",
+//       "Santa Clara, California",
+//       1)
+// ];
+
+
 
 
 // class QuestionScreen extends StatefulWidget {

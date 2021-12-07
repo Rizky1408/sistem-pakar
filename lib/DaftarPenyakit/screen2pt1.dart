@@ -8,7 +8,7 @@ import 'package:vannamei/DaftarPenyakit/virus4.dart';
 import 'package:vannamei/DaftarPenyakit/virus5.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:vannamei/constants.dart';
-import 'DaftarPenyakit/virus1.dart';
+import 'package:vannamei/DaftarPenyakit/virus1.dart';
 
 class Virus extends StatefulWidget {
   const Virus({Key key}) : super(key: key);

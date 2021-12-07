@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/constants.dart';
-import 'package:vannamei/screen2pt1.dart';
-import 'package:vannamei/screen2pt2.dart';
-import 'package:vannamei/screen2pt3.dart';
+import 'package:vannamei/DaftarPenyakit/screen2pt1.dart';
+import 'package:vannamei/DaftarPenyakit/screen2pt2.dart';
+import 'package:vannamei/DaftarPenyakit/screen2pt3.dart';
 
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({Key key}) : super(key: key);

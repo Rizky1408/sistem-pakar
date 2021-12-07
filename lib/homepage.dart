@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/constants.dart';
-import 'package:vannamei/screen1.dart';
+import 'package:vannamei/CekDiagnosa/screen1.dart';
 // import 'package:google_fonts/google_fonts.dart';
-import 'package:vannamei/screen2.dart';
-import 'package:vannamei/screen3.dart';
+import 'package:vannamei/DaftarPenyakit/screen2.dart';
+import 'package:vannamei/Bantuan/screen3.dart';
 import 'package:vannamei/screen4.dart';
 
 class HomeScreen extends StatelessWidget {

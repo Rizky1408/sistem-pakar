@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/constants.dart';
-import 'package:vannamei/question_widget.dart';
-import 'package:vannamei/slider.dart';
+import 'package:vannamei/CekDiagnosa/hasil_diagnosa.dart';
+import 'package:vannamei/CekDiagnosa/question_widget.dart';
+import 'package:vannamei/CekDiagnosa/question_widget2.dart';
 
 class Landing extends StatefulWidget {
   @override
@@ -14,47 +15,49 @@ class _LandingState extends State<Landing> {
   PageController _controller = PageController();
 
   List<Widget> _pages = [
-    SliderPage(
-      title: "Udang berenang ke permukaan atau ke tepi",
-      description: "Udang berenang ke permukaan atau ke tepi",
-      value: "value",
-    ),
-    SliderPage(
-      title: "Udang berenang ke permukaan atau ke tepi",
-      description:
-          "Buy Bitcoin and cryptocurrencies with VISA and MasterVard right in the App",
-      value: "value2",
-    ),
-    SliderPage(
-      title: "Udang berenang ke permukaan atau ke tepi",
-      description: "Udang berenang ke permukaan atau ke tepi",
-      value: "value3",
-    ),
-    SliderPage(
-      title: "Udang berenang ke permukaan atau ke tepi",
-      description: "Udang berenang ke permukaan atau ke tepi",
-      value: "value4",
-    ),
-    SliderPage(
-      title: "Udang berenang ke permukaan atau ke tepi",
-      description: "Udang berenang ke permukaan atau ke tepi",
-      value: "value5",
-    ),
-    SliderPage(
-      title: "Udang berenang ke permukaan atau ke tepi",
-      description: "Udang berenang ke permukaan atau ke tepi",
-      value: "value6",
-    ),
-    SliderPage(
-      title: "Udang berenang ke permukaan atau ke tepi",
-      description: "Udang berenang ke permukaan atau ke tepi",
-      value: "value7",
-    ),
-    SliderPage(
-      title: "Udang berenang ke permukaan atau ke tepi",
-      description: "Udang berenang ke permukaan atau ke tepi",
-      value: "value8",
-    ),
+    QuestionWidget(),
+    QuestionWidget2(),
+    // SliderPage(
+    //   title: "Udang berenang ke permukaan atau ke tepi",
+    //   description: "Udang berenang ke permukaan atau ke tepi",
+    //   value: "value",
+    // ),
+    // SliderPage(
+    //   title: "Udang berenang ke permukaan atau ke tepi",
+    //   description:
+    //       "Buy Bitcoin and cryptocurrencies with VISA and MasterVard right in the App",
+    //   value: "value2",
+    // ),
+    // SliderPage(
+    //   title: "Udang berenang ke permukaan atau ke tepi",
+    //   description: "Udang berenang ke permukaan atau ke tepi",
+    //   value: "value3",
+    // ),
+    // SliderPage(
+    //   title: "Udang berenang ke permukaan atau ke tepi",
+    //   description: "Udang berenang ke permukaan atau ke tepi",
+    //   value: "value4",
+    // ),
+    // SliderPage(
+    //   title: "Udang berenang ke permukaan atau ke tepi",
+    //   description: "Udang berenang ke permukaan atau ke tepi",
+    //   value: "value5",
+    // ),
+    // SliderPage(
+    //   title: "Udang berenang ke permukaan atau ke tepi",
+    //   description: "Udang berenang ke permukaan atau ke tepi",
+    //   value: "value6",
+    // ),
+    // SliderPage(
+    //   title: "Udang berenang ke permukaan atau ke tepi",
+    //   description: "Udang berenang ke permukaan atau ke tepi",
+    //   value: "value7",
+    // ),
+    // SliderPage(
+    //   title: "Udang berenang ke permukaan atau ke tepi",
+    //   description: "Udang berenang ke permukaan atau ke tepi",
+    //   value: "value8",
+    // ),
   ];
 
   _onchanged(int index) {
@@ -134,8 +137,7 @@ class _LandingState extends State<Landing> {
                           ),
                           onPressed: () => Navigator.push(
                             context,
-                            MaterialPageRoute(
-                                builder: (context) => QuestionWidget()),
+                            MaterialPageRoute(builder: (context) => Persen()),
                           ),
                         )
                       : Icon(

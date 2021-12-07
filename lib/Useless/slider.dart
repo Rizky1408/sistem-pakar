@@ -5,7 +5,8 @@ import 'package:radio_grouped_buttons/radio_grouped_buttons.dart';
 
 class SliderPage extends StatefulWidget {
   final String title, description, value;
-  const SliderPage({Key key, this.title, this.description, this.value})
+  const SliderPage(
+      {Key key, this.title, this.description, this.value, String valuen})
       : super(key: key);
 
   @override
@@ -20,7 +21,6 @@ class _SliderPageState extends State<SliderPage> {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     return Container(
       alignment: Alignment.centerLeft,
       color: Colors.white,
