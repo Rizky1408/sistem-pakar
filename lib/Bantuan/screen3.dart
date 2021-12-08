@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vannamei/Bantuan/pil1.dart';
 import 'package:vannamei/Bantuan/pil2.dart';
+import 'package:vannamei/Bantuan/pil3.dart';
 import 'package:vannamei/constants.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -40,11 +41,14 @@ class ProfileScreen extends StatelessWidget {
                           builder: (context) => Pil2(),
                         ))),
                 ProfileMenu(
-                  text:
-                      "Mengenai Informasi Perawatan, Penanganan, atau Pencegahan",
-                  // icon: "assets/icons/Settings.svg",
-                  press: () {},
-                ),
+                    text:
+                        "Mengenai Informasi Perawatan, Penanganan, atau Pencegahan",
+                    // icon: "assets/icons/Settings.svg",
+                    press: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Pil3(),
+                        ))),
                 ProfileMenu(
                   text: "Pusat Bantuan",
                   // icon: "assets/icons/Question mark.svg",
