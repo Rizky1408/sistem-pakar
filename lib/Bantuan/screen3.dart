@@ -54,11 +54,11 @@ class ProfileScreen extends StatelessWidget {
                   // icon: "assets/icons/Question mark.svg",
                   press: () {},
                 ),
-                ProfileMenu(
-                  text: "Syarat dan Ketentuan Aplikasi",
-                  // icon: "assets/icons/Log out.svg",
-                  press: () {},
-                ),
+                // ProfileMenu(
+                //   text: "Syarat dan Ketentuan Aplikasi",
+                //   // icon: "assets/icons/Log out.svg",
+                //   press: () {},
+                // ),
               ]),
         ));
   }

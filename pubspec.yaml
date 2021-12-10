@@ -24,7 +24,6 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^2.1.0
-  flutter_svg: ^0.19.0
   cached_network_image: ^3.0.0
   radio_grouped_buttons: ^1.0.1
 
@@ -38,6 +37,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.9.2
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/AppIcon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -58,6 +63,9 @@ flutter:
     - assets/images/shrimp_logo2.png
     - assets/images/shrimp_logo3.png
     - assets/images/shrimp_logo4.png
+    - assets/images/shrimp_logo_rev1.png
+    - assets/images/shrimp_logo_rev3.png
+    - assets/icons/AppIcon.png
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

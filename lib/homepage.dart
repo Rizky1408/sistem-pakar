@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                         },
                         child: CategoryCard(
                           title: "Cek Diagnosa",
-                          image: "assets/images/shrimp_logo.png",
+                          image: "assets/images/shrimp_logo_rev1.png",
                         ),
                       ),
                       InkWell(
@@ -112,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                         },
                         child: CategoryCard(
                           title: "Bantuan",
-                          image: "assets/images/shrimp_logo3.png",
+                          image: "assets/images/shrimp_logo_rev3.png",
                         ),
                       ),
                       InkWell(

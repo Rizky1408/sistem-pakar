@@ -104,10 +104,10 @@ class _BakteriState extends State<Bakteri> {
                             );
                           },
                         ),
-                        SeassionCard(
-                          bakteriName: "4",
-                          press: () {},
-                        ),
+                        // SeassionCard(
+                        //   bakteriName: "4",
+                        //   press: () {},
+                        // ),
                         // SeassionCard(
                         //   bakteriName: "",
                         //   press: () {},
@@ -149,19 +149,20 @@ class _BakteriState extends State<Bakteri> {
                           //   "assets/icons/Meditation_women_small.svg",
                           // ),
                           SizedBox(width: 20),
-                          // Expanded(
-                          //   child: Column(
-                          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          //     crossAxisAlignment: CrossAxisAlignment.start,
-                          //     children: <Widget>[
-                          //       Text(
-                          //         "Basic 2",
-                          //         style: Theme.of(context).textTheme.subtitle2,
-                          //       ),
-                          //       Text("Start your deepen you practice")
-                          //     ],
-                          //   ),
-                          // ),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Penyakit pada Vannamei yang disebabkan oleh bakteri :",
+                                  style: Theme.of(context).textTheme.subtitle2,
+                                ),
+                                Text(
+                                    "White Feces Disease, Black Spot Disease, dan Early Mortality Syndrome.")
+                              ],
+                            ),
+                          ),
                           Padding(
                             padding: EdgeInsets.all(10),
                             // child: SvgPicture.asset("assets/icons/Lock.svg"),

@@ -10,6 +10,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      builder: (context, child) {
+        final mediaQueryData = MediaQuery.of(context);
+        final scale = mediaQueryData.textScaleFactor.clamp(1.0, 1.3);
+        return MediaQuery(
+          child: child,
+          data: MediaQuery.of(context).copyWith(textScaleFactor: scale),
+        );
+      },
       debugShowCheckedModeBanner: false,
       title: 'Sistem Pakar Vannamei',
       theme: ThemeData(

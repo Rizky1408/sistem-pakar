@@ -943,6 +943,7 @@ class _Question4State extends State<Question4> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: kBlueColor,
+          centerTitle: true,
           title: Text(
             "Cek Diagnosa",
             style: TextStyle(color: Colors.white),

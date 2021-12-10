@@ -146,7 +146,7 @@ class _VirusState extends State<Virus> {
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 20),
                       padding: EdgeInsets.all(10),
-                      height: 90,
+                      height: 150,
                       decoration: BoxDecoration(
                         color: kBlueLightColor,
                         borderRadius: BorderRadius.circular(13),
@@ -165,19 +165,20 @@ class _VirusState extends State<Virus> {
                           //   "assets/icons/Meditation_women_small.svg",
                           // ),
                           SizedBox(width: 20),
-                          // Expanded(
-                          //   child: Column(
-                          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          //     crossAxisAlignment: CrossAxisAlignment.start,
-                          //     children: <Widget>[
-                          //       Text(
-                          //         "Basic 2",
-                          //         style: Theme.of(context).textTheme.subtitle2,
-                          //       ),
-                          //       Text("Start your deepen you practice")
-                          //     ],
-                          //   ),
-                          // ),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Penyakit pada Vannamei yang disebabkan oleh virus :",
+                                  style: Theme.of(context).textTheme.subtitle2,
+                                ),
+                                Text(
+                                    "White Spot Syndrome Virus, Taura Syndrome Virus, Infectious Myonecrosis Virus, Infectious Hypodermal and Haematopoietic Virus, dan Yellow Head Disease.")
+                              ],
+                            ),
+                          ),
                           Padding(
                             padding: EdgeInsets.all(10),
                             // child: SvgPicture.asset("assets/icons/Lock.svg"),

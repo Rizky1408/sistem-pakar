@@ -82,32 +82,32 @@ class _ParasitState extends State<Parasit> {
                             );
                           },
                         ),
-                        SeassionCard(
-                          parasitName: "2",
-                          press: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(builder: (context) {
-                            //     return Parasit2();
-                            //   }),
-                            // );
-                          },
-                        ),
-                        SeassionCard(
-                          parasitName: "3",
-                          press: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(builder: (context) {
-                            //     return Parasit3();
-                            //   }),
-                            // );
-                          },
-                        ),
-                        SeassionCard(
-                          parasitName: "4",
-                          press: () {},
-                        ),
+                        // SeassionCard(
+                        //   parasitName: "2",
+                        //   press: () {
+                        //     // Navigator.push(
+                        //     //   context,
+                        //     //   MaterialPageRoute(builder: (context) {
+                        //     //     return Parasit2();
+                        //     //   }),
+                        //     // );
+                        //   },
+                        // ),
+                        // SeassionCard(
+                        //   parasitName: "3",
+                        //   press: () {
+                        //     // Navigator.push(
+                        //     //   context,
+                        //     //   MaterialPageRoute(builder: (context) {
+                        //     //     return Parasit3();
+                        //     //   }),
+                        //     // );
+                        //   },
+                        // ),
+                        // SeassionCard(
+                        //   parasitName: "4",
+                        //   press: () {},
+                        // ),
                         // SeassionCard(
                         //   parasitName: "",
                         //   press: () {},
@@ -149,19 +149,19 @@ class _ParasitState extends State<Parasit> {
                           //   "assets/icons/Meditation_women_small.svg",
                           // ),
                           SizedBox(width: 20),
-                          // Expanded(
-                          //   child: Column(
-                          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          //     crossAxisAlignment: CrossAxisAlignment.start,
-                          //     children: <Widget>[
-                          //       Text(
-                          //         "Basic 2",
-                          //         style: Theme.of(context).textTheme.subtitle2,
-                          //       ),
-                          //       Text("Start your deepen you practice")
-                          //     ],
-                          //   ),
-                          // ),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Penyakit pada Vannamei yang disebabkan oleh parasit :",
+                                  style: Theme.of(context).textTheme.subtitle2,
+                                ),
+                                Text("Enterocytozon Hepatopenaei.")
+                              ],
+                            ),
+                          ),
                           Padding(
                             padding: EdgeInsets.all(10),
                             // child: SvgPicture.asset("assets/icons/Lock.svg"),

@@ -11,7 +11,7 @@ class Pil3 extends StatelessWidget {
           backgroundColor: kBlueColor,
           centerTitle: true,
           title: Text(
-            "Mengenai Informasi Perawatan, Penanganan, atau Pencegahan",
+            "Pusat Bantuan",
             style: TextStyle(color: Colors.white, fontSize: 14),
           ),
         ),
@@ -36,7 +36,7 @@ class Pil3 extends StatelessWidget {
                       height: 5,
                     ),
                     Text(
-                      "Berikut ini merupakan penjelasan mengenai informasi perawatan, penanganan, atau pencegahan.",
+                      "Berikut ini merupakan Pusat Bantuan yang dapat dihubungi.",
                       style:
                           TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.start,
@@ -45,18 +45,18 @@ class Pil3 extends StatelessWidget {
                       height: 8,
                     ),
                     ListTile(
-                      leading: Text("\u2022"),
+                      leading: Icon(Icons.email),
                       title: RichText(
                         text: TextSpan(
-                          text:
-                              'Informasi perawatan, penanganan, atau pencegahan yang ada dalam aplikasi ini diperoleh dari berbagai sumber literasi.',
-                          style: TextStyle(color: Colors.black, fontSize: 16),
+                          text: 'Email',
+                          style: TextStyle(
+                              color: kBlueColor, fontWeight: FontWeight.bold),
                           children: <TextSpan>[
                             TextSpan(
-                              text: '',
+                              text: 'gema.annisa1020@students.unila.ac.id',
                               style: TextStyle(
-                                color: kBlueColor,
-                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                fontSize: 16,
                               ),
                             ),
                           ],
@@ -64,22 +64,20 @@ class Pil3 extends StatelessWidget {
                       ),
                     ),
                     ListTile(
-                      leading: Text("\u2022"),
+                      leading: Icon(Icons.phone),
                       title: RichText(
                         text: TextSpan(
-                          text: 'Pada bagian  ',
-                          style: TextStyle(color: Colors.black, fontSize: 16),
+                          text: 'Telepon',
+                          style: TextStyle(
+                              color: kBlueColor, fontWeight: FontWeight.bold),
                           children: <TextSpan>[
                             TextSpan(
-                              text: 'Informasi Perawatan ',
+                              text: '+6289631******',
                               style: TextStyle(
-                                color: kBlueColor,
-                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                fontSize: 16,
                               ),
                             ),
-                            TextSpan(
-                                text:
-                                    'yang terdapat pada halaman penjelasan mengenai penyakit, informasi yang tertera dapat digunakan untuk menambah pengetahuan.'),
                           ],
                         ),
                       ),

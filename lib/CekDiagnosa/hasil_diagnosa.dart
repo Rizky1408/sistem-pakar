@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vannamei/DaftarPenyakit/hasil_penyakit.dart';
+import 'package:vannamei/DaftarPenyakit/screen2.dart';
 import 'package:vannamei/constants.dart';
-import 'package:vannamei/CekDiagnosa/question_widget2.dart';
 import 'package:vannamei/homepage.dart';
 
 // ignore: must_be_immutable
@@ -356,7 +355,7 @@ class _PersenState extends State<Persen> {
       disease = "EHP";
     } else {
       hasil = 0;
-      print("Mohon maaf sistem tidak dapat mendeteksi");
+      disease = " Tidak Diketahui";
     }
 
     akhir = hasil * 100;
@@ -387,33 +386,51 @@ class _PersenState extends State<Persen> {
                 children: <Widget>[
                   Container(
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         SizedBox(
-                          height: 15,
+                          height: 35,
                         ),
                         Text("Hasil Diagnosa",
                             style: GoogleFonts.josefinSans(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
+                              fontSize: 26,
+                              fontWeight: FontWeight.w800,
                             )),
-                        SizedBox(
-                          height: 25,
-                        ),
-                        Container(
+                        Center(
                             child: Column(children: [
-                          Text(akhir.toString() + " %",
-                              style: GoogleFonts.fjallaOne(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w500,
-                              )),
-                          Text("Penyakit " + disease.toString(),
-                              style: GoogleFonts.fjallaOne(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w500,
-                              )),
+                          SizedBox(
+                            height: 45,
+                          ),
+                          Container(
+                              child: Column(children: [
+                            Text(akhir.toString() + " %",
+                                style: GoogleFonts.fjallaOne(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w500,
+                                )),
+                            RichText(
+                              text: TextSpan(
+                                text: 'Penyakit ',
+                                style: GoogleFonts.fjallaOne(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                      text: disease.toString(),
+                                      style: GoogleFonts.fjallaOne(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.red,
+                                      )),
+                                ],
+                              ),
+                            ),
+                          ])),
                         ])),
                         SizedBox(
-                          height: 25,
+                          height: 85,
                         ),
                       ],
                     ),
@@ -427,17 +444,54 @@ class _PersenState extends State<Persen> {
                           padding:
                               EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                           textStyle: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold)),
+                              fontSize: 22, fontWeight: FontWeight.bold)),
                       child: Text(
-                        "Beranda",
+                        "ke Daftar Penyakit",
                         style: GoogleFonts.josefinSans(
                             color: Colors.white, fontWeight: FontWeight.w700),
                       ),
                       onPressed: () => Navigator.push(
                           context,
                           MaterialPageRoute(
+                            builder: (context) => DetailsScreen(),
+                          ))),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          minimumSize: const Size(200, 50),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(28.0)),
+                          primary: kBlueColor,
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                          textStyle: TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.bold)),
+                      child: Container(
+                        width: 112,
+                        margin: EdgeInsets.symmetric(horizontal: 30),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.home),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "Beranda",
+                              style: GoogleFonts.josefinSans(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                          ],
+                        ),
+                      ),
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
                             builder: (context) => HomeScreen(),
-                          )))
+                          ))),
                 ],
               ),
             ),
