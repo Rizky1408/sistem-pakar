@@ -105,7 +105,7 @@ class ProfileApp extends StatelessWidget {
                                     height: 8,
                                   ),
                                   Text(
-                                      "Aplikasi Sistem Pakar ini dibuat untuk memenuhi tugas Mata Kuliah Kapita Selekta.",
+                                      "Aplikasi Sistem Pakar ini dibuat untuk memenuhi tugas Mata Kuliah Sistem Pakar Universitas Teknologi Sumbawa.",
                                       style: TextStyle(
                                           color: kBlueColor,
                                           fontWeight: FontWeight.bold,
@@ -251,8 +251,8 @@ class ProfileApp extends StatelessWidget {
                     height: 10.0,
                   ),
                   Text(
-                    'Gema Annisa Hermastuti dengan Nomor Induk Mahasiswa 1817051020.\n'
-                    'Sehari-hari berkegiatan sebagai mahasiswa jurusan Ilmu Komputer, Universitas Lampung',
+                    'Rizky Adi Ryanto dengan nomor induk 19.01.013.044 adalah mahasiswa terganteng .\n'
+                    'Sehari-hari berkegiatan sebagai mahasiswa jurusan Teknik Informatika, Universitas Teknologi Sumbawa',
                     style: GoogleFonts.josefinSans(
                       fontSize: 16.0,
                       // fontStyle: FontStyle.italic,
